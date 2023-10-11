@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Basic CSS</title>
+        <style></style>
+        <script>
+            function initialize(){
+                Character1output = document.getElementById("output1");
+                Character2output = document.getElementById("output2");
+                Character3output = document.getElementById("output3");
+
+            }
+
+            function clickResponse1(){
+                if(Character1output.innerHTML === "..."){
+                    Character1output.innerHTML = "Event 1 is happening right now go to the Convention page and click the bottom button!";
+                }else{
+                    Character1output.innerHTML = "...";
+                }
+            }
+
+            function clickResponse2(){
+                if(Character2output.innerHTML === "..."){
+                    Character2output.innerHTML = "This event has been delayed till further notice sadly";
+                }else{
+                    Character2output.innerHTML = "...";
+                }
+            }
+
+            function clickResponse3(){
+
+                Character3output.innerHTML === "..." ? Character3output.innerHTML = "This event happens 2 hours from now and you will be trapped in a painting" : Character3output.innerHTML = "...";
+            }
+        </script>
+    </head>
+
+    <body onload = "initialize();">
+        <h1>This is Destination</h1>
+
+        <div id = "output1">
+			...
+		</div>
+        <button onclick = "clickResponse1();">Person 1!</button>
+
+        <div id = "output2">
+			...
+		</div>
+        <button onclick = "clickResponse2();">Person 2!</button>
+
+        <div id = "output3">
+			...
+		</div>
+        <button onclick = "clickResponse3();">Person 3!</button>
+
+
+        <h1></h1>
+        <a href = "Convention.html">Link to Convention</a><br/><br/>
+        <a href = "Guest.html">Link to Guest Page</a><br/><br/>
+
+    </body>
+</html>

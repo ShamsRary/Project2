@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Basic CSS</title>
+        <style></style>
+        <script>
+            function initialize(){
+                Character1output = document.getElementById("output1");
+                Character2output = document.getElementById("output2");
+                Character3output = document.getElementById("output3");
+
+            }
+
+            function clickResponse1(){
+                if(Character1output.innerHTML === "..."){
+                    Character1output.innerHTML = "The great Rick! You should click the dont click button! He is avabile at all times";
+                }else{
+                    Character1output.innerHTML = "...";
+                }
+            }
+
+            function clickResponse2(){
+                if(Character2output.innerHTML === "..."){
+                    Character2output.innerHTML = "A great artist who is sadly not alive anymore. You cant meet him but you can see his work at 12.";
+                }else{
+                    Character2output.innerHTML = "...";
+                }
+            }
+
+            function clickResponse3(){
+
+                Character3output.innerHTML === "..." ? Character3output.innerHTML = "A man in a painting, you can talk to him if when have a wild imagination." : Character3output.innerHTML = "...";
+            }
+        </script>
+    </head>
+
+    <body onload = "initialize();">
+        <h1>This is Destination</h1>
+
+        <div>
+
+            <img src = "Photo/R.jpg" />
+        </div>
+        <div id = "output1">
+			...
+		</div>
+        <button onclick = "clickResponse1();">Person 1!</button>
+
+        <div>
+            <img src = "Photo/L.jpg" />
+        </div>
+        <div id = "output2">
+			...
+		</div>
+        <button onclick = "clickResponse2();">Person 2!</button>
+
+        <div>
+            <img src = "Photo/A.jpg" />
+        </div>
+        <div id = "output3">
+			...
+		</div>
+        <button onclick = "clickResponse3();">Person 3!</button>
+
+
+        <h1></h1>
+        <a href = "Convention.html">Link to Convention</a><br/><br/>
+        <a href = "Event.html">Link to Event Page</a><br/><br/>
+
+    </body>
+</html>

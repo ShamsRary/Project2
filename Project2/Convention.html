@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Splash Page</title>
+        <style>
+            a{
+                font:24pt arial;
+                color:orange;
+            }
+
+            div{
+            
+                font:24pt arial;
+                color: black;
+                background-color:yellow;
+            }
+        </style>
+        <script>
+            function initialize(){
+                fontSizeOutput = document.getElementById("sizeout");
+                halloweenText = document.getElementById("colordiv");
+                fore = "black";
+                back = "yellow";
+                fontSize = 24;
+            }
+
+            function display(){
+                let size = "big";
+                halloweenText.style.color = fore;
+                halloweenText.style.backgroundColor = back;
+                fontSize += randomNumber();
+                fontSize -= randomNumber();
+                if(fontSize < 4){
+                    fontSize = 4;
+                }
+                if(fontSize < 30){
+                    size = "small";
+                }
+
+                halloweenText.style.fontSize = fontSize + "pt";
+                //fontSizeOutput.innerHTML = fontSize;
+                fontSizeOutput.innerHTML = (`${fontSize} which is ${size}`);
+
+            }
+
+            function toggleColor(){
+                let temp = fore;
+                fore = back;
+                back = temp;
+                display();
+            }
+            
+           let randomNumber = () =>  Math.random() * 10
+
+        </script>
+    </head>
+    
+
+    <body onload = "initialize();">
+        <div id = "colordiv">
+            WELCOME TO OUR SPLASH PAGE
+        </div> 
+
+        <div>Current font size: <span id = "sizeout"></span> point</div>
+
+
+        <button onclick = "toggleColor();">Toggle colors</button>
+        <h2>Highlights cool stuff</h2>
+        <h3>The convention has many amazing people and singers like Rick Roll</h3>
+        <h3>There is a party afterwards</h3>
+        <h3>There is also a water slide</h3>
+        <h3>There is other guest speakers and singers check out out guestpage to see</h3>
+
+        <a href = "Guest.html">Link to Guest Page</a><br/><br/>
+        <a href = "Event.html">Link to Event Page</a><br/><br/>
+
+        <a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ">Dont click</a><br/><br/>
+
+
+        
+    </body>
+</html>
